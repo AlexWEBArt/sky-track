@@ -1,0 +1,191 @@
+[
+    {
+        "id": "f1",
+        "flightNumber": "TK143",
+        "airline": "Turkish Airlines",
+        "airlineLogo": "/logos/turkish.svg",
+        "departure": {
+            "code": "SOF",
+            "name": "Sofia Airport",
+            "city": "Sofia",
+            "country": "Bulgaria"
+        },
+        "arrival": {
+            "code": "PEK",
+            "name": "Beijing Capital International Airport",
+            "city": "Beijing",
+            "country": "China"
+        },
+        "aircraft": "TC-JFP",
+        "code": "93247",
+        "statusPercent": 67
+    },
+    {
+        "id": "f2",
+        "flightNumber": "RN1782",
+        "airline": "Ryanair",
+        "airlineLogo": "/logos/ryanair.svg",
+        "departure": {
+            "code": "DUB",
+            "name": "Dublin Airport",
+            "city": "Dublin",
+            "country": "Ireland"
+        },
+        "arrival": {
+            "code": "LCA",
+            "name": "Larnaca International Airport",
+            "city": "Larnaca",
+            "country": "Cyprus"
+        },
+        "aircraft": "D-AISP",
+        "code": "7812",
+        "statusPercent": 73
+    },
+    {
+        "id": "f3",
+        "flightNumber": "S7124",
+        "airline": "S7 Airlines",
+        "airlineLogo": "/logos/s7.svg",
+        "departure": {
+            "code": "NCE",
+            "name": "Nice Côte d\\'Azur Airport",
+            "city": "Nice",
+            "country": "France"
+        },
+        "arrival": {
+            "code": "TBS",
+            "name": "Tbilisi International Airport",
+            "city": "Tbilisi",
+            "country": "Georgia"
+        },
+        "aircraft": "RA-73435",
+        "code": "88015",
+        "statusPercent": 45
+    },
+    {
+        "id": "f4",
+        "flightNumber": "LX318",
+        "airline": "SWISS",
+        "airlineLogo": "/logos/swiss.svg",
+        "departure": {
+            "code": "OPO",
+            "name": "Francisco Sá Carneiro Airport",
+            "city": "Porto",
+            "country": "Portugal"
+        },
+        "arrival": {
+            "code": "GYD",
+            "name": "Heydar Aliyev International Airport",
+            "city": "Baku",
+            "country": "Azerbaijan"
+        },
+        "aircraft": "HB-JHK",
+        "code": "94102",
+        "statusPercent": 29
+    },
+    {
+        "id": "f5",
+        "flightNumber": "LH401",
+        "airline": "Lufthansa",
+        "airlineLogo": "/logos/lufthansa.svg",
+        "departure": {
+            "code": "BOJ",
+            "name": "Burgas Airport",
+            "city": "Burgas",
+            "country": "Bulgaria"
+        },
+        "arrival": {
+            "code": "MCT",
+            "name": "Muscat International Airport",
+            "city": "Muscat",
+            "country": "Oman"
+        },
+        "aircraft": "D-ATXO",
+        "code": "90936",
+        "statusPercent": 81
+    },
+    {
+        "id": "f6",
+        "flightNumber": "AF109",
+        "airline": "Air France",
+        "airlineLogo": "https://www.static-af.com/assets/af/img/logo-120.png",
+        "departure": {
+            "code": "CDG",
+            "name": "Charles de Gaulle Airport",
+            "city": "Paris",
+            "country": "France"
+        },
+        "arrival": {
+            "code": "JFK",
+            "name": "John F. Kennedy International Airport",
+            "city": "New York",
+            "country": "USA"
+        },
+        "aircraft": "F-GZNN",
+        "code": "14589",
+        "statusPercent": 54
+    },
+    {
+        "id": "f7",
+        "flightNumber": "EK202",
+        "airline": "Emirates",
+        "airlineLogo": "https://www.emirates.com/favicon.ico",
+        "departure": {
+            "code": "JFK",
+            "name": "John F. Kennedy International Airport",
+            "city": "New York",
+            "country": "USA"
+        },
+        "arrival": {
+            "code": "DXB",
+            "name": "Dubai International Airport",
+            "city": "Dubai",
+            "country": "UAE"
+        },
+        "aircraft": "A6-EDX",
+        "code": "33872",
+        "statusPercent": 92
+    },
+    {
+        "id": "f8",
+        "flightNumber": "QR38",
+        "airline": "Qatar Airways",
+        "airlineLogo": "https://www.qatarairways.com/favicon.ico",
+        "departure": {
+            "code": "OSL",
+            "name": "Oslo Gardermoen Airport",
+            "city": "Oslo",
+            "country": "Norway"
+        },
+        "arrival": {
+            "code": "DOH",
+            "name": "Hamad International Airport",
+            "city": "Doha",
+            "country": "Qatar"
+        },
+        "aircraft": "A7-ALF",
+        "code": "11829",
+        "statusPercent": 61
+    },
+    {
+        "id": "f9",
+        "flightNumber": "SU213",
+        "airline": "Aeroflot",
+        "airlineLogo": "https://www.aeroflot.com/favicon.ico",
+        "departure": {
+            "code": "DEL",
+            "name": "Indira Gandhi International Airport",
+            "city": "Delhi",
+            "country": "India"
+        },
+        "arrival": {
+            "code": "SVO",
+            "name": "Sheremetyevo International Airport",
+            "city": "Moscow",
+            "country": "Russia"
+        },
+        "aircraft": "RA-89015",
+        "code": "24378",
+        "statusPercent": 22
+    }
+]
