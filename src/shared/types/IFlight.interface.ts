@@ -19,6 +19,7 @@ export interface IFlight {
     departure: IDeparture
     arrival: IArrival
     aircraft: string
+    airplaneImage: string
     code: string
     statusPercent: number
 }

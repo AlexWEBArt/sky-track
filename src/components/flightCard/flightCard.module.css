@@ -1,3 +1,12 @@
+.flight_button {
+    display: flex;
+    /* width: 100%; */
+    margin-bottom: 8px;
+    padding: 2px; /* зазор-рамка */
+    border-radius: 16px;
+    background-color: transparent;
+}
+
 .flight_card {
     display: flex;
     flex-direction: column;
@@ -6,16 +15,19 @@
     width: 350px;
     height: 170px;
     padding: 14px;
-    margin-bottom: 8px;
-    border: 1px solid transparent;
-    border-radius: 6px;
-    background-color: #1f1f23;
+    border: 2px solid transparent;
+    border-radius: 16px;
+    background-color: var(--color-secondary);
     transition: background-color 0.2s ease;
 }
 
-.flight_card.active {
-    border-color: #ff6600;
-    background-color: #2a2a2e;
+.active {
+    /* border: 1px solid #ff6600; */
+    background: linear-gradient(to right, #ff5e00 50%, #ffae00 100%);
+    border-radius: 18px; /* чуть больше, чем у внутренней */
+
+    /* display: flex; */
+    /* border-color: #ff6600; */
 }
 
 .airline {

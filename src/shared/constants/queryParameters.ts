@@ -1,0 +1,1 @@
+export const QUARY_PARAM_FLIGHT = 'flight'
