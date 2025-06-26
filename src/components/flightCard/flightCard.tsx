@@ -15,6 +15,14 @@ export function FlightCard({ flight }: Props) {
     const isActive = selectedFlight === flight.flightNumber
 
     const handleClickOpenFlight = () => {
+        if (selectedFlight === flight.flightNumber) {
+            const params = new URLSearchParams(searchParams)
+            params.delete(QUARY_PARAM_FLIGHT)
+            setSearchParams(params)
+
+            return null
+        }
+
         setSearchParams({
             [QUARY_PARAM_FLIGHT]: flight.flightNumber
         })
@@ -30,7 +38,7 @@ export function FlightCard({ flight }: Props) {
                     </div>
                     <div className={styles.airline_code}>
                         <span className={styles.code}>{flight.code}</span>
-                        <span className={styles.aircraft}>{flight.aircraft}</span>
+                        <span className={styles.aircraft}>{flight.airplane.aircraft}</span>
                     </div>
                 </div>
                 <div className={styles.route}>

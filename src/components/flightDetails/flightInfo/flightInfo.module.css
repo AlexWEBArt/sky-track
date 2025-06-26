@@ -1,0 +1,63 @@
+.flight_info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    border-radius: 16px;
+}
+
+.flight_info_title {
+    padding: 8px 12px;
+    border-radius: 12px 12px 0 0;
+    background-color: #282828;
+}
+
+.other_info {
+    display: flex;
+    justify-content: space-between;
+    gap: 2px;
+}
+
+.airplane,
+.country,
+.speed,
+.altitude {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 16px 12px;
+
+    font-size: 12px;
+    background-color: var(--color-secondary);
+}
+
+.airplane,
+.country {
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.contry_flag {
+    width: 20px;
+    height: 15px;
+}
+
+.airplane_parameters {
+    display: flex;
+    justify-content: space-between;
+    gap: 2px;
+}
+
+.speed span:first-child,
+.altitude span:first-child {
+    color: #808080;
+}
+
+.speed {
+    border-radius: 0 0 0 12px;
+}
+
+.altitude {
+    border-radius: 0 0 12px 0;
+}
