@@ -1,3 +1,4 @@
+import cn from 'clsx'
 import { useSearchParams } from 'react-router'
 import type { IFlight } from '../../shared/types/IFlight.interface'
 import { QUARY_PARAM_FLIGHT } from '../../shared/constants/queryParameters'
@@ -7,14 +8,17 @@ import { RouteInfo } from './routeInfo/routeInfo'
 import { FlightInfo } from './flightInfo/flightInfo'
 import { Actions } from './actions/actions'
 import { FlightTitle } from './flightTitle/flightTitle'
+import { useTheme } from '../../shared/theme'
 
 interface Props {
     flights: IFlight[]
 }
 
 export function FlightDetails({ flights }: Props) {
+    const { theme } = useTheme()
     const [searchParams, setSearchParams] = useSearchParams()
     const selectedFlight = searchParams.get(QUARY_PARAM_FLIGHT)
+    const themeClassName = theme === 'dark' ? styles.dark : ''
 
     const flight = useMemo(() => flights.find(flight => flight.flightNumber === selectedFlight), [selectedFlight])
 
@@ -28,7 +32,7 @@ export function FlightDetails({ flights }: Props) {
         <>
             {
                 flight &&
-                <div className={styles.outer_container}>
+                <div className={cn(styles.outer_container, themeClassName)}>
                     <div className={styles.header}>
                         <FlightTitle
                             flightNumber={flight.flightNumber}
