@@ -10,6 +10,7 @@
     padding: 8px 12px;
     border-radius: 12px 12px 0 0;
     background-color:  var(--bg-third-color);
+    transition: background-color 0.2s ease;
 }
 
 .other_info {
@@ -30,6 +31,7 @@
 
     font-size: 12px;
     background-color: var(--bg-second-color);
+    transition: background-color 0.2s ease;
 }
 
 .airplane,

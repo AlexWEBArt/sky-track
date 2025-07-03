@@ -2,14 +2,14 @@ import { FlightDetails } from '../../components/flightDetails'
 import { FlightList } from '../../components/flightList/flightList'
 import flights from '../../shared/data/flights.json'
 import styles from './homePage.module.css'
-import { ThemeButton } from '../../shared/theme'
+import { Header } from '../../components/header/header'
 
 export const HomePage = () => {
     return (
-        <main className={styles.page_layout}>
+        <div className={styles.page_layout}>
             <FlightList flights={flights} />
+            <Header />
             <FlightDetails flights={flights} />
-            <ThemeButton />
-        </main>
+        </div>
     )
 }

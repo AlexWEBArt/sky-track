@@ -89,3 +89,14 @@
     font-weight: bold;
     color: var(--color-primary);
 }
+
+@media (max-width: 1120px) {
+    .flight_button {
+                margin: auto;
+    }
+
+    .flight_card {
+        width: 80vw;
+        margin: auto;
+    }
+}

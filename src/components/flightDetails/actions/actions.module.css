@@ -21,6 +21,7 @@
     font-size: 14px;
 
     background-color: var(--bg-third-color);
+    transition: background-color 0.2s ease;
 }
 
 .action_route {
