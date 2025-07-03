@@ -1,7 +1,6 @@
 .flight_button {
     display: flex;
 
-    margin-bottom: 8px;
     padding: 4px;
     border-radius: 16px;
     background-color: transparent;
