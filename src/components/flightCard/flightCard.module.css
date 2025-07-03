@@ -1,8 +1,8 @@
 .flight_button {
     display: flex;
-    /* width: 100%; */
+
     margin-bottom: 8px;
-    padding: 2px; /* зазор-рамка */
+    padding: 4px;
     border-radius: 16px;
     background-color: transparent;
 }
@@ -15,19 +15,15 @@
     width: 350px;
     height: 170px;
     padding: 14px;
-    border: 2px solid transparent;
+    border: 4px solid transparent;
     border-radius: 16px;
-    background-color: var(--color-secondary);
+    background-color: var(--bg-second-color);
     transition: background-color 0.2s ease;
 }
 
 .active {
-    /* border: 1px solid #ff6600; */
-    background: linear-gradient(to right, #ff5e00 50%, #ffae00 100%);
-    border-radius: 18px; /* чуть больше, чем у внутренней */
-
-    /* display: flex; */
-    /* border-color: #ff6600; */
+    background: var(--bg-gradient);
+    border-radius: 18px;
 }
 
 .airline {
@@ -46,24 +42,26 @@
     height: 36px;
     margin-right: 8px;
     border-radius: 50%;
-    background-color: #e7e7e7;
+    background-color: #ffffff;
 }
 
 .flight_number {
     font-size: 16px;
-    color: #ccc;
+    color: var(--color-primary);
 }
 
 .airline_code {
     display: flex;
     gap: 4px;
     font-size: 14px;
-    color: #d6d6d6;
+    color: var(--color-primary);
+    transition: color 0.2s ease;
 }
 
 .airline_code span {
     padding: 4px 6px;
-    background-color: #3b3b3b;
+    background-color: var(--bg-third-color);
+    transition: background-color 0.2s ease;
     border: 1px solid transparent;
     border-radius: 16px;
 }
@@ -83,11 +81,11 @@
 .airport_city {
     text-align: left;
     font-size: 14px;
-    color: #ccc;
+    color: var(--color-primary);
 }
 
 .airport_code {
     font-size: 38px;
     font-weight: bold;
-    color: #ccc;
+    color: var(--color-primary);
 }

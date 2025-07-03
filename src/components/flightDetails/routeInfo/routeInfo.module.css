@@ -23,7 +23,7 @@
     padding: 16px;
 
     border-radius: 12px 0 0 0;
-    background-color: var(--color-secondary);
+    background-color: var(--bg-second-color);
 }
 
 .to {
@@ -33,21 +33,21 @@
 .airport_code {
     font-size: 32px;
     font-weight: bold;
-    color: #fff;
+    color: var(--color-primary);
     margin-bottom: 10px;
 }
 
 .airport_city {
     font-size: 14px;
     font-weight: bold;
-    color: #ccc;
+    color: var(--color-primary);
     margin-bottom: 8px;
 }
 
 .time_zone {
     font-size: 12px;
     font-weight: bold;
-    color: #808080;
+    color: var(--color-secondary);
 }
 
 .palne_icon {
@@ -66,13 +66,13 @@
     height: 45px;
 
     border-radius: 50%;
-    color: #F0A925;
-    background-color: #111111;
+    color: var(--color-special);
+    background-color: var(--bg-primary-color);
 }
 
 .route_progress {
     height: 60px;
-    background-color: var(--color-secondary);
+    background-color:  var(--bg-second-color);
 }
 
 .schedule {
@@ -107,13 +107,13 @@
     text-align: right;
     font-size: 12px;
     
-    background-color: var(--color-secondary);
+    background-color:  var(--bg-second-color);
 }
 
 .departure div span:first-child,
 .arrival div span:first-child{
     text-align: left;
-    color: #808080;
+    color: var(--color-secondary);
 }
 
 .arrival div:first-child span:first-child {

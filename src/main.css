@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url('fonts/JetBrainsMono-Medium.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+  font-family: JetBrainsMono, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--color-primary);
+  background-color: var(--bg-primary-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-theme="dark"] {
+  --bg-primary-color: #000000;
+  --bg-second-color: #1c1c1c;
+  --bg-third-color: #262626;
+  --color-primary: #ffffff;
+  --color-secondary: #8C8C8C;
+  --color-special: #fda416;
+  --bg-gradient: linear-gradient(
+      to right, 
+      #D26159 0%, 
+      #DD7847 100%);
+}
+
+[data-theme="light"] {
+  --bg-primary-color: #ffffff;
+  --bg-second-color: #eeeeee;
+  --bg-third-color: #bebebe;
+  --color-primary: #1c1c1c;
+  --color-secondary: #8C8C8C;
+  --color-special: #167afd;
+  --bg-gradient: linear-gradient(
+      to right, 
+      #167afd 0%, 
+      #68aeff 100%);
+}
+
+body {
+  margin: 0;
+
+  min-width: 320px;
+  min-height: 100vh;
+}

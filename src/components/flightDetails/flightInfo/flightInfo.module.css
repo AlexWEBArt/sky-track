@@ -9,7 +9,7 @@
 .flight_info_title {
     padding: 8px 12px;
     border-radius: 12px 12px 0 0;
-    background-color: #282828;
+    background-color:  var(--bg-third-color);
 }
 
 .other_info {
@@ -29,7 +29,7 @@
     padding: 16px 12px;
 
     font-size: 12px;
-    background-color: var(--color-secondary);
+    background-color: var(--bg-second-color);
 }
 
 .airplane,
@@ -51,7 +51,7 @@
 
 .speed span:first-child,
 .altitude span:first-child {
-    color: #808080;
+    color: var(--color-secondary)
 }
 
 .speed {

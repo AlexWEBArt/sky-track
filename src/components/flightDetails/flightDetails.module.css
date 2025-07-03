@@ -5,7 +5,8 @@
     width: 350px;
 
     border-radius: 26px;
-    background-color: #e2e2e2;
+    background-color: var(--bg-primary-color);
+    transition: background-color 0.2s ease;
 }
 
 .header {
@@ -24,8 +25,4 @@
     flex-direction: column;
     gap: 12px;
     padding: 12px;
-}
-
-.dark {
-    background-color: #000;
 }

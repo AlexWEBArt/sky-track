@@ -1,5 +1,6 @@
 import {
     createContext,
+    useEffect,
     useMemo,
     useState,
     type PropsWithChildren
@@ -19,10 +20,14 @@ export interface IThemeContext {
 export const ThemeContext = createContext<IThemeContext>({})
 
 const defaultTheme =
-    (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme) || Theme.LIGHT
+    (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme) || Theme.DARK
 
 export const ThemeProvider = ({ children }: PropsWithChildren) => {
     const [theme, setTheme] = useState<Theme>(defaultTheme)
+
+    useEffect(() => {
+        document.documentElement.setAttribute('data-theme', theme)
+    }), [theme]
 
     const defaultValue = useMemo(
         () => ({
