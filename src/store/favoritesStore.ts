@@ -1,5 +1,6 @@
 import { makeAutoObservable, reaction } from "mobx"
 import { LOCAL_STORAGE_FAVORITES_KEY } from "shared/constants"
+import flights from 'shared/data/flights.json'
 
 class FavoritesStore {
     favorites: Set<string> = new Set()
@@ -41,6 +42,10 @@ class FavoritesStore {
         } else {
             this.addFavorite(flightId)
         }
+    }
+
+    get favoriteFlights() {
+        return flights.filter(flight => this.isFavorite(flight.id));
     }
 }
 
