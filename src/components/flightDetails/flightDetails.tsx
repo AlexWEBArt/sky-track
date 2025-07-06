@@ -41,6 +41,7 @@ export function FlightDetails({ flights }: Props) {
                         <RouteInfo
                             departure={flight.departure}
                             arrival={flight.arrival}
+                            route={flight.route}
                         />
                         <FlightInfo
                             airplane={flight.airplane}

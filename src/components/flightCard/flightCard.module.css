@@ -74,6 +74,10 @@
     justify-content: space-between;
 }
 
+.route_progress {
+    width: 100%;
+}
+
 .airport {
     display: flex;
     flex-direction: column;

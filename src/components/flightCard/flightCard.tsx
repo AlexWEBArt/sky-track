@@ -5,6 +5,7 @@ import type { IFlight } from 'shared/types/IFlight.interface'
 import { QUARY_PARAM_FLIGHT } from 'shared/constants'
 import styles from './flightCard.module.css'
 import { favoritesStore } from 'store'
+import { ProgressBar } from 'shared/ui/progressBar'
 
 interface Props {
     flight: IFlight
@@ -49,6 +50,9 @@ export const FlightCard = observer(function FlightCard({ flight }: Props) {
                     <div className={styles.airport}>
                         <span className={styles.airport_city}>{flight.departure.city}</span>
                         <span className={styles.airport_code}>{flight.departure.code}</span>
+                    </div>
+                    <div className={styles.route_progress}>
+                        <ProgressBar progress={flight.route.statusPercent} />
                     </div>
                     <div className={styles.airport}>
                         <span className={styles.airport_city}>{flight.arrival.city}</span>

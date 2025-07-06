@@ -1,12 +1,14 @@
-import type { IArrival, IDeparture } from 'shared/types/IFlight.interface'
+import { ProgressBar } from 'shared/ui/progressBar'
+import type { IArrival, IDeparture, IRoute } from 'shared/types/IFlight.interface'
 import styles from './routeInfo.module.css'
 
 interface Props {
     departure: IDeparture
     arrival: IArrival
+    route: IRoute
 }
 
-export function RouteInfo({ departure, arrival }: Props) {
+export function RouteInfo({ departure, arrival, route }: Props) {
     return (
         <div className={styles.route_info}>
             <div className={styles.route}>
@@ -25,7 +27,7 @@ export function RouteInfo({ departure, arrival }: Props) {
                 </div>
             </div>
             <div className={styles.route_progress}>
-
+                <ProgressBar progress={route.statusPercent}/>
             </div>
             <div className={styles.schedule}>
                 <div className={styles.departure}>
