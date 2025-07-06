@@ -1,8 +1,8 @@
 import cn from 'clsx'
 import { useSearchParams } from 'react-router'
-import type { IFlight } from '../../shared/types/IFlight.interface'
+import type { IFlight } from 'shared/types/IFlight.interface'
+import { QUARY_PARAM_FLIGHT } from 'shared/constants/queryParameters'
 import styles from './flightCard.module.css'
-import { QUARY_PARAM_FLIGHT } from '../../shared/constants/queryParameters'
 
 interface Props {
     flight: IFlight

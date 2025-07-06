@@ -1,4 +1,4 @@
-import type { IAirplane, IRoute } from "../../../shared/types/IFlight.interface"
+import type { IAirplane, IRoute } from 'shared/types/IFlight.interface'
 import styles from './flightInfo.module.css'
 
 interface Props {

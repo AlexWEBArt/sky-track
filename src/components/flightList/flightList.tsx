@@ -1,8 +1,9 @@
 import { useState } from "react"
-import type { IFlight } from "../../shared/types/IFlight.interface"
+import type { IFlight } from "shared/types/IFlight.interface"
 import { FlightCard } from "../flightCard"
 import { FlightFilters } from "./flightFilters/flightFilters"
 import styles from './flightList.module.css'
+
 
 interface Props {
     flights: IFlight[]

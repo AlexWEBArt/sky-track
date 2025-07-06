@@ -1,6 +1,6 @@
 import cn from 'clsx'
 import { Link } from 'react-router'
-import { ThemeButton } from '../../shared/theme'
+import { ThemeButton } from 'shared/theme'
 import styles from './header.module.css'
 
 export function Header() {
