@@ -1,4 +1,4 @@
-import { ThemeProvider } from '../../shared/theme'
+import { ThemeProvider } from 'shared/theme'
 import type { PropsWithChildren } from 'react'
 
 export const Providers = ({ children }: PropsWithChildren) => {

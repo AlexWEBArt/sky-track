@@ -3,7 +3,7 @@ import {
     Theme,
     ThemeContext,
 } from './themeProvider'
-import { LOCAL_STORAGE_THEME_KEY } from '../constants/storageKey'
+import { LOCAL_STORAGE_THEME_KEY } from 'shared/constants'
 
 interface UseThemeResults {
     theme?: Theme

@@ -1,6 +1,6 @@
 import { Header } from 'components/header/header'
 import { FlightDetails } from 'components/flightDetails'
-import { FlightList } from 'components/flightList/flightList'
+import { FlightList } from 'components/flightList'
 import flights from 'shared/data/flights.json'
 import styles from './homePage.module.css'
 

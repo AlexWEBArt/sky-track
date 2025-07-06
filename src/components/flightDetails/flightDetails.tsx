@@ -1,6 +1,6 @@
 import { useSearchParams } from 'react-router'
 import type { IFlight } from 'shared/types/IFlight.interface'
-import { QUARY_PARAM_FLIGHT } from 'shared/constants/queryParameters'
+import { QUARY_PARAM_FLIGHT } from 'shared/constants'
 import { useMemo } from 'react'
 import styles from './flightDetails.module.css'
 import { RouteInfo } from './routeInfo/routeInfo'

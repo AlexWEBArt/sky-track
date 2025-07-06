@@ -1,14 +1,16 @@
 import cn from 'clsx'
+import { observer } from "mobx-react-lite"
 import { useSearchParams } from 'react-router'
 import type { IFlight } from 'shared/types/IFlight.interface'
-import { QUARY_PARAM_FLIGHT } from 'shared/constants/queryParameters'
+import { QUARY_PARAM_FLIGHT } from 'shared/constants'
 import styles from './flightCard.module.css'
+import { favoritesStore } from 'store'
 
 interface Props {
     flight: IFlight
 }
 
-export function FlightCard({ flight }: Props) {
+export const FlightCard = observer(function FlightCard({ flight }: Props) {
     const [searchParams, setSearchParams] = useSearchParams()
     const selectedFlight = searchParams.get(QUARY_PARAM_FLIGHT)
 
@@ -28,9 +30,11 @@ export function FlightCard({ flight }: Props) {
         })
     }
 
+    const handleClickFavorites = () => favoritesStore.toggleFavorite(flight.id)
+
     return (
-        <button className={cn(styles.flight_button, isActive && styles.active)} onClick={handleClickOpenFlight}>
-            <div className={styles.flight_card}>
+        <div className={cn(styles.flight_button, isActive && styles.active)}>
+            <button className={styles.flight_card} onClick={handleClickOpenFlight}>
                 <div className={styles.airline}>
                     <div className={styles.airline_logo}>
                         <img src={flight.airlineLogo} alt={flight.airline} />
@@ -51,7 +55,13 @@ export function FlightCard({ flight }: Props) {
                         <span className={styles.airport_code}>{flight.arrival.code}</span>
                     </div>
                 </div>
-            </div>
-        </button>
+            </button>
+            <button
+                className={cn(styles.btn_favotites, favoritesStore.isFavorite(flight.id) && styles.is_favorites)}
+                onClick={handleClickFavorites}
+            >
+                ★
+            </button>
+        </div>
     )
-}
+})

@@ -28,6 +28,7 @@
       "components/*": ["components/*"],
       "pages/*": ["pages/*"],
       "shared/*": ["shared/*"],
+      "store/*": ["store/*"]
     }
   },
   "include": ["src"]

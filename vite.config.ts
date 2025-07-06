@@ -10,6 +10,7 @@ export default defineConfig({
       pages: "/src/pages",
       components: "/src/components",
       shared: "/src/shared",
+      store: "/src/store"
     }
   }
 })

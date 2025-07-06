@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router"
-import { HomePage } from "../../pages/home"
+import { HomePage } from "pages/home"
 
 export const AppRouter = () => {
     return (

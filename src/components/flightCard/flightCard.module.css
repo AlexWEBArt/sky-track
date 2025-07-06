@@ -1,5 +1,8 @@
 .flight_button {
+    position: relative;
+
     display: flex;
+    align-items: flex-start;
 
     padding: 4px;
     border-radius: 16px;
@@ -87,6 +90,20 @@
     font-size: 38px;
     font-weight: bold;
     color: var(--color-primary);
+}
+
+.btn_favotites {
+    position: absolute;
+    top: 0;
+    right: 8px;
+    padding:  0 0 5px 5px;
+
+    font-size: 28px;
+    color: var(--color-secondary);
+}
+
+.is_favorites {
+    color: var(--color-special);
 }
 
 @media (max-width: 1120px) {
