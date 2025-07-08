@@ -1,34 +1,47 @@
 .outer_container {
-    position: fixed;
-    top: 14px;
-    right: 14px;
-    width: 350px;
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  width: 350px;
 
-    border-radius: 26px;
-    background-color: var(--bg-primary-color);
-    transition: background-color 0.2s ease;
+  border-radius: 26px;
+  background-color: var(--bg-primary-color);
+  transition: background-color 0.2s ease;
 }
 
 .header {
-    position: relative;
-    height: 280px;
-    border-radius: 22px 22px 0 0;
-    background: linear-gradient(to bottom, #68aeff 0%, #98c8ff 100%);
+  position: relative;
+  height: 280px;
+  border-radius: 22px 22px 0 0;
+  background: linear-gradient(to bottom, #68aeff 0%, #98c8ff 100%);
 }
 
 .airplane_image {
-    margin-top: 90px;
+  margin-top: 90px;
 }
 
 .details_container {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
 }
 
 @media (max-width: 1120px) {
-    .outer_container {
-        display: none;
-    }
+  .outer_container {
+    position: absolut;
+    top: 0;
+    right: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    border-radius: 0;
+    overflow: auto;
+    z-index: 100;
+  }
+
+  .header {
+    border-radius: 0;
+  }
 }

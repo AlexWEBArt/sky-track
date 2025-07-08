@@ -1,122 +1,122 @@
 .flight_button {
-    position: relative;
+  position: relative;
 
-    display: flex;
-    align-items: flex-start;
+  display: flex;
+  align-items: flex-start;
 
-    padding: 4px;
-    border-radius: 16px;
-    background-color: transparent;
+  padding: 4px;
+  border-radius: 16px;
+  background-color: transparent;
 }
 
 .flight_card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
-    width: 350px;
-    height: 170px;
-    padding: 14px;
-    border: 4px solid transparent;
-    border-radius: 16px;
-    background-color: var(--bg-second-color);
-    transition: background-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 350px;
+  height: 170px;
+  padding: 14px;
+  border: 4px solid transparent;
+  border-radius: 16px;
+  background-color: var(--bg-second-color);
+  transition: background-color 0.2s ease;
 }
 
 .active {
-    background: var(--bg-gradient);
-    border-radius: 18px;
+  background: var(--bg-gradient);
+  border-radius: 18px;
 }
 
 .airline {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
 }
 
 .airline_logo {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .airline img {
-    height: 36px;
-    margin-right: 8px;
-    border-radius: 50%;
-    background-color: #ffffff;
+  height: 36px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: #ffffff;
 }
 
 .flight_number {
-    font-size: 16px;
-    color: var(--color-primary);
+  font-size: 16px;
+  color: var(--color-primary);
 }
 
 .airline_code {
-    display: flex;
-    gap: 4px;
-    font-size: 14px;
-    color: var(--color-primary);
-    transition: color 0.2s ease;
+  display: flex;
+  gap: 4px;
+  font-size: 14px;
+  color: var(--color-primary);
+  transition: color 0.2s ease;
 }
 
 .airline_code span {
-    padding: 4px 6px;
-    background-color: var(--bg-third-color);
-    transition: background-color 0.2s ease;
-    border: 1px solid transparent;
-    border-radius: 16px;
+  padding: 4px 6px;
+  background-color: var(--bg-third-color);
+  transition: background-color 0.2s ease;
+  border: 1px solid transparent;
+  border-radius: 16px;
 }
 
 .route {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .route_progress {
-    width: 100%;
+  width: 100%;
 }
 
 .airport {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .airport_city {
-    text-align: left;
-    font-size: 14px;
-    color: var(--color-primary);
+  text-align: left;
+  font-size: 14px;
+  color: var(--color-primary);
 }
 
 .airport_code {
-    font-size: 38px;
-    font-weight: bold;
-    color: var(--color-primary);
+  font-size: 38px;
+  font-weight: bold;
+  color: var(--color-primary);
 }
 
 .btn_favotites {
-    position: absolute;
-    top: 0;
-    right: 8px;
-    padding:  0 0 5px 5px;
+  position: absolute;
+  top: 0;
+  right: 8px;
+  padding: 0 0 5px 5px;
 
-    font-size: 28px;
-    color: var(--color-secondary);
+  font-size: 28px;
+  color: var(--color-secondary);
 }
 
 .is_favorites {
-    color: var(--color-special);
+  color: var(--color-special);
 }
 
 @media (max-width: 1120px) {
-    .flight_button {
-                margin: auto;
-    }
+  .flight_button {
+    margin: auto;
+  }
 
-    .flight_card {
-        width: 80vw;
-        margin: auto;
-    }
+  .flight_card {
+    width: 90vw;
+    margin: auto;
+  }
 }

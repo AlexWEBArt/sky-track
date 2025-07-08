@@ -1,60 +1,77 @@
 .header {
-    position: fixed;
-    top: 14px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    height: fit-content;
-    padding: 20px;
-    border-radius: 16px;
-    background-color: var(--bg-second-color);
-    z-index: 100;
+  position: fixed;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: fit-content;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: var(--bg-second-color);
+  z-index: 100;
 }
 
 .logo {
-    font-size: 20px;
-    letter-spacing: 4px;
-    background: var(--bg-gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    border-radius: 20px;
+  font-size: 20px;
+  letter-spacing: 4px;
+  background: var(--bg-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-radius: 20px;
 }
 
 .logo span {
-    background: var(--bg-gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 22px;
-    text-shadow: 0 0 12px var(--color-special);
+  background: var(--bg-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 22px;
+  text-shadow: 0 0 12px var(--color-special);
 }
 
 .menu_list {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .menu_list_item {
-    font-size: 14px;
-    opacity: 0.70;
+  font-size: 14px;
+  opacity: 0.7;
 }
 
 .menu_list_item:hover {
-    opacity: 0.9;
-    scale: 1.02;
+  opacity: 0.9;
+  scale: 1.02;
 }
 
 .menu_list_item.active {
-    opacity: 1;
+  opacity: 1;
 }
 
-@media (max-width: 1120px) {
-    .header {
-        width: 70%;
-        margin: auto;
-    }
+@media (min-width: 500px) and (max-width: 1120px) {
+  .header {
+    justify-content: center;
+    width: 70%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 499px) {
+  .header {
+    /* position: relative; */
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    margin: auto;
+  }
+
+  .header button {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+  }
 }
