@@ -110,7 +110,17 @@
   color: var(--color-special);
 }
 
-@media (max-width: 1120px) {
+@media (min-width: 576px) and (max-width: 1120px) {
+  .flight_button {
+    margin: auto;
+  }
+
+  .flight_card {
+    margin: auto;
+  }
+}
+
+@media (max-width: 575px) {
   .flight_button {
     margin: auto;
   }

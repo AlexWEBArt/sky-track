@@ -27,7 +27,21 @@
   padding: 12px;
 }
 
-@media (max-width: 1120px) {
+@media (min-width: 768px) and (max-width: 1120px) {
+  .outer_container {
+    position: relative;
+    margin-top: 80px;
+    width: 45%;
+    max-width: 425px;
+    height: fit-content;
+  }
+
+  .header {
+    border-radius: 26px;
+  }
+}
+
+@media (max-width: 767px) {
   .outer_container {
     position: absolut;
     top: 0;
@@ -42,6 +56,9 @@
   }
 
   .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 0;
   }
 }
