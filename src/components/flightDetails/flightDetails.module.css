@@ -3,7 +3,7 @@
   top: 14px;
   right: 14px;
   width: 350px;
-
+  z-index: 100;
   border-radius: 26px;
   background-color: var(--bg-primary-color);
   transition: background-color 0.2s ease;

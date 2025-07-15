@@ -1,4 +1,15 @@
 .flight_list {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  max-height: 100vh;
+  overflow-y: auto;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,6 +17,10 @@
 
   padding: 10px;
   border-radius: 8px;
+}
+
+.flight_list::-webkit-scrollbar {
+  display: none;
 }
 
 @media (min-width: 576px) and (max-width: 1120px) {

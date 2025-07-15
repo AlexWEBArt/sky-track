@@ -4,7 +4,8 @@
   width: 100%;
   min-height: 100vh;
 
-  background-image: url("/Basemap-background.jpg");
+  background: transparent;
+  /* background-image: url("/Basemap-background.jpg"); */
 }
 
 @media (min-width: 768px) and (max-width: 1120px) {
