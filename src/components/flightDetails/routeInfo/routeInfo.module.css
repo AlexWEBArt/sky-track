@@ -1,125 +1,125 @@
 .route_info {
-    display: flex;
-    flex-direction: column;
-    gap: 2px
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .route {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
 }
 
 .from,
 .to {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    width: 100%;
-    padding: 16px;
+  width: 100%;
+  padding: 16px;
 
-    border-radius: 12px 0 0 0;
-    background-color: var(--bg-second-color);
+  border-radius: 12px 0 0 0;
+  background-color: var(--bg-second-color);
 }
 
 .to {
-    border-radius: 0 12px 0 0;
+  border-radius: 0 12px 0 0;
 }
 
 .airport_code {
-    font-size: 32px;
-    font-weight: bold;
-    color: var(--color-primary);
-    margin-bottom: 10px;
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: 10px;
 }
 
 .airport_city {
-    font-size: 14px;
-    font-weight: bold;
-    color: var(--color-primary);
-    margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: 8px;
 }
 
 .time_zone {
-    font-size: 12px;
-    font-weight: bold;
-    color: var(--color-secondary);
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--color-secondary);
 }
 
-.palne_icon {
-    position: absolute;
-    top: calc(width/2);
-    left: calc(width/2);
-    z-index: 10;
+.plane_icon {
+  position: absolute;
+  top: calc(width/2);
+  left: calc(width/2);
+  z-index: 10;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    font-size: 26px;
+  font-size: 26px;
 
-    width: 45px;
-    height: 45px;
+  width: 45px;
+  height: 45px;
 
-    border-radius: 50%;
-    color: var(--color-special);
-    background-color: var(--bg-primary-color);
+  border-radius: 50%;
+  color: var(--color-special);
+  background-color: var(--bg-primary-color);
 }
 
 .route_progress {
-    height: 60px;
-    background-color:  var(--bg-second-color);
+  height: 60px;
+  background-color: var(--bg-second-color);
 }
 
 .schedule {
-    display: flex;
-    flex-direction: column;
-    gap: 2px
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .departure,
 .arrival {
-    display: flex;
-    justify-content: space-between;
-    gap: 2px;
+  display: flex;
+  justify-content: space-between;
+  gap: 2px;
 }
 
 .arrival {
-    border-radius: 0 0 12px 0;
+  border-radius: 0 0 12px 0;
 }
 
 .departure div,
-.arrival div{
-    display: flex;
-    width: 100%;
+.arrival div {
+  display: flex;
+  width: 100%;
 }
 
 .departure span,
-.arrival span{
-    display: block;
-    width: 100%;
-    padding: 16px 12px;
-    
-    text-align: right;
-    font-size: 12px;
-    
-    background-color:  var(--bg-second-color);
+.arrival span {
+  display: block;
+  width: 100%;
+  padding: 16px 12px;
+
+  text-align: right;
+  font-size: 12px;
+
+  background-color: var(--bg-second-color);
 }
 
 .departure div span:first-child,
-.arrival div span:first-child{
-    text-align: left;
-    color: var(--color-secondary);
+.arrival div span:first-child {
+  text-align: left;
+  color: var(--color-secondary);
 }
 
 .arrival div:first-child span:first-child {
-    border-radius: 0 0 0 12px;
+  border-radius: 0 0 0 12px;
 }
 
 .arrival div:last-child span:last-child {
-    border-radius: 0 0 12px 0;
+  border-radius: 0 0 12px 0;
 }

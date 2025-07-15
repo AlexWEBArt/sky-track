@@ -1,1 +1,1 @@
-export { ProgressBar } from './progressBar.tsx'
+export { ProgressBar } from "./progressBar.tsx";

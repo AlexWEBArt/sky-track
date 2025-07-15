@@ -1,52 +1,55 @@
-import { makeAutoObservable, reaction } from "mobx"
-import { LOCAL_STORAGE_FAVORITES_KEY } from "shared/constants"
-import flights from 'shared/data/flights.json'
+import { makeAutoObservable, reaction } from "mobx";
+import { LOCAL_STORAGE_FAVORITES_KEY } from "shared/constants";
+import flights from "shared/data/flights.json";
 
 class FavoritesStore {
-    favorites: Set<string> = new Set()
+  favorites: Set<string> = new Set();
 
-    constructor() {
-        const saved = localStorage.getItem(LOCAL_STORAGE_FAVORITES_KEY)
-        if (saved) {
-            try {
-                this.favorites = new Set(JSON.parse(saved))
-            } catch {
-                this.favorites = new Set()
-            }
-        }
-        makeAutoObservable(this)
-
-        reaction(
-            () => Array.from(this.favorites),
-            (favArr) => {
-                localStorage.setItem(LOCAL_STORAGE_FAVORITES_KEY, JSON.stringify(favArr))
-            }
-        )
+  constructor() {
+    const saved = localStorage.getItem(LOCAL_STORAGE_FAVORITES_KEY);
+    if (saved) {
+      try {
+        this.favorites = new Set(JSON.parse(saved));
+      } catch {
+        this.favorites = new Set();
+      }
     }
+    makeAutoObservable(this);
 
-    addFavorite(flightId: string) {
-        this.favorites.add(flightId)
-    }
+    reaction(
+      () => Array.from(this.favorites),
+      (favArr) => {
+        localStorage.setItem(
+          LOCAL_STORAGE_FAVORITES_KEY,
+          JSON.stringify(favArr)
+        );
+      }
+    );
+  }
 
-    removeFavorite(flightId: string) {
-        this.favorites.delete(flightId)
-    }
+  addFavorite(flightId: string) {
+    this.favorites.add(flightId);
+  }
 
-    isFavorite(flightId: string) {
-        return this.favorites.has(flightId)
-    }
+  removeFavorite(flightId: string) {
+    this.favorites.delete(flightId);
+  }
 
-    toggleFavorite(flightId: string) {
-        if (this.isFavorite(flightId)) {
-            this.removeFavorite(flightId)
-        } else {
-            this.addFavorite(flightId)
-        }
-    }
+  isFavorite(flightId: string) {
+    return this.favorites.has(flightId);
+  }
 
-    get favoriteFlights() {
-        return flights.filter(flight => this.isFavorite(flight.id));
+  toggleFavorite(flightId: string) {
+    if (this.isFavorite(flightId)) {
+      this.removeFavorite(flightId);
+    } else {
+      this.addFavorite(flightId);
     }
+  }
+
+  get favoriteFlights() {
+    return flights.filter((flight) => this.isFavorite(flight.id));
+  }
 }
 
-export const favoritesStore = new FavoritesStore()
+export const favoritesStore = new FavoritesStore();

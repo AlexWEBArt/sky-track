@@ -1,8 +1,8 @@
 @font-face {
-    font-family: 'JetBrainsMono';
-    src: url('fonts/JetBrainsMono-Medium.ttf');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "JetBrainsMono";
+  src: url("fonts/JetBrainsMono-Medium.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 
 :root {
@@ -25,12 +25,9 @@
   --bg-second-color: #1c1c1c;
   --bg-third-color: #262626;
   --color-primary: #ffffff;
-  --color-secondary: #8C8C8C;
+  --color-secondary: #8c8c8c;
   --color-special: #fda416;
-  --bg-gradient: linear-gradient(
-      to right, 
-      #D26159 0%, 
-      #DD7847 100%);
+  --bg-gradient: linear-gradient(to right, #d26159 0%, #dd7847 100%);
 }
 
 [data-theme="light"] {
@@ -38,12 +35,9 @@
   --bg-second-color: #eeeeee;
   --bg-third-color: #bebebe;
   --color-primary: #1c1c1c;
-  --color-secondary: #8C8C8C;
+  --color-secondary: #8c8c8c;
   --color-special: #167afd;
-  --bg-gradient: linear-gradient(
-      to right, 
-      #167afd 0%, 
-      #68aeff 100%);
+  --bg-gradient: linear-gradient(to right, #167afd 0%, #68aeff 100%);
 }
 
 body {

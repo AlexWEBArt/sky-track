@@ -1,1 +1,1 @@
-export { SkeletonLoader } from './skeletonLoader'
+export { SkeletonLoader } from "./skeletonLoader";

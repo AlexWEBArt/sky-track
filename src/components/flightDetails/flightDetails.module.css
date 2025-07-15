@@ -27,6 +27,26 @@
   padding: 12px;
 }
 
+.fade_enter {
+  opacity: 0;
+  transform: translateX(380px);
+}
+.fade_enter_active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 250ms, transform 250ms;
+}
+
+.fade_exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.fade_exit_active {
+  opacity: 0;
+  transform: translateX(380px);
+  transition: opacity 250ms, transform 250ms;
+}
+
 @media (min-width: 768px) and (max-width: 1120px) {
   .outer_container {
     position: relative;
@@ -42,8 +62,8 @@
 }
 
 @media (max-width: 767px) {
-  .outer_container {
-    position: absolut;
+  .outer_container:has(> *) {
+    position: fixed;
     top: 0;
     right: 0;
 

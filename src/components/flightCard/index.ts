@@ -1,1 +1,1 @@
-export { FlightCard } from './flightCard'
+export { FlightCard } from "./flightCard";

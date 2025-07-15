@@ -3,14 +3,10 @@ import type { IFlight } from "shared/types/IFlight.interface";
 import { FlightCard } from "../flightCard";
 import { FlightFilters } from "./flightFilters/flightFilters";
 import styles from "./flightList.module.css";
+import type { IFlightFilters } from "shared/types/IFlightFilters.interface";
 
 interface Props {
   flights: IFlight[];
-}
-
-export interface IFlightFilters {
-  countrie: string;
-  airline: string;
 }
 
 const getFilteredCountries = (flights: IFlight[]) => {
@@ -23,29 +19,29 @@ const getFilteredAirlines = (flights: IFlight[]) => {
 
 export function FlightList({ flights }: Props) {
   const [activeFilters, setActiveFilter] = useState<IFlightFilters>({
-    countrie: "All",
+    country: "All",
     airline: "All",
   });
   const filteredCountries = getFilteredCountries(flights);
   const filteredAirlines = getFilteredAirlines(flights);
   const filteredFlight =
-    activeFilters.countrie === "All" && activeFilters.airline === "All"
+    activeFilters.country === "All" && activeFilters.airline === "All"
       ? flights
       : flights.filter((flight) => {
           if (
-            activeFilters.countrie !== "All" &&
+            activeFilters.country !== "All" &&
             activeFilters.airline === "All"
           ) {
-            return flight.route.countryName === activeFilters.countrie;
+            return flight.route.countryName === activeFilters.country;
           }
           if (
             activeFilters.airline !== "All" &&
-            activeFilters.countrie === "All"
+            activeFilters.country === "All"
           ) {
             return flight.airline === activeFilters.airline;
           }
           return (
-            flight.route.countryName === activeFilters.countrie &&
+            flight.route.countryName === activeFilters.country &&
             flight.airline === activeFilters.airline
           );
         });

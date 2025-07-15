@@ -1,4 +1,4 @@
-import type { IFlightFilters } from "../flightList";
+import type { IFlightFilters } from "shared/types/IFlightFilters.interface";
 import styles from "./flightFilters.module.css";
 
 interface Props {
@@ -19,11 +19,11 @@ export function FlightFilters({
       <select
         className={styles.filters_select}
         name="filterCountries"
-        value={activeFilter.countrie}
+        value={activeFilter.country}
         onChange={(e) =>
           setActiveFilter({
             ...activeFilter,
-            countrie: e.target.value,
+            country: e.target.value,
           })
         }
       >

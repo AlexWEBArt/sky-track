@@ -1,65 +1,65 @@
 .flight_info {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 
-    border-radius: 16px;
+  border-radius: 16px;
 }
 
 .flight_info_title {
-    padding: 8px 12px;
-    border-radius: 12px 12px 0 0;
-    background-color:  var(--bg-third-color);
-    transition: background-color 0.2s ease;
+  padding: 8px 12px;
+  border-radius: 12px 12px 0 0;
+  background-color: var(--bg-third-color);
+  transition: background-color 0.2s ease;
 }
 
 .other_info {
-    display: flex;
-    justify-content: space-between;
-    gap: 2px;
+  display: flex;
+  justify-content: space-between;
+  gap: 2px;
 }
 
 .airplane,
 .country,
 .speed,
 .altitude {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 16px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 12px;
 
-    font-size: 12px;
-    background-color: var(--bg-second-color);
-    transition: background-color 0.2s ease;
+  font-size: 12px;
+  background-color: var(--bg-second-color);
+  transition: background-color 0.2s ease;
 }
 
 .airplane,
 .country {
-    justify-content: flex-start;
-    gap: 8px;
+  justify-content: flex-start;
+  gap: 8px;
 }
 
-.contry_flag {
-    width: 20px;
-    height: 15px;
+.country_flag {
+  width: 20px;
+  height: 15px;
 }
 
 .airplane_parameters {
-    display: flex;
-    justify-content: space-between;
-    gap: 2px;
+  display: flex;
+  justify-content: space-between;
+  gap: 2px;
 }
 
 .speed span:first-child,
 .altitude span:first-child {
-    color: var(--color-secondary)
+  color: var(--color-secondary);
 }
 
 .speed {
-    border-radius: 0 0 0 12px;
+  border-radius: 0 0 0 12px;
 }
 
 .altitude {
-    border-radius: 0 0 12px 0;
+  border-radius: 0 0 12px 0;
 }

@@ -1,56 +1,77 @@
-import { useSearchParams } from 'react-router'
-import type { IFlight } from 'shared/types/IFlight.interface'
-import { QUARY_PARAM_FLIGHT } from 'shared/constants'
-import { useMemo } from 'react'
-import styles from './flightDetails.module.css'
-import { RouteInfo } from './routeInfo/routeInfo'
-import { FlightInfo } from './flightInfo/flightInfo'
-import { Actions } from './actions/actions'
-import { FlightTitle } from './flightTitle/flightTitle'
+import { useSearchParams } from "react-router";
+import type { IFlight } from "shared/types/IFlight.interface";
+import { QUERY_PARAM_FLIGHT } from "shared/constants";
+import { useMemo, useRef } from "react";
+import styles from "./flightDetails.module.css";
+import { RouteInfo } from "./routeInfo/routeInfo";
+import { FlightInfo } from "./flightInfo/flightInfo";
+import { Actions } from "./actions/actions";
+import { FlightTitle } from "./flightTitle/flightTitle";
+import { CSSTransition, SwitchTransition } from "react-transition-group";
 
 interface Props {
-    flights: IFlight[]
+  flights: IFlight[];
 }
 
 export function FlightDetails({ flights }: Props) {
-    const [searchParams, setSearchParams] = useSearchParams()
-    const selectedFlight = searchParams.get(QUARY_PARAM_FLIGHT)
+  const [searchParams, setSearchParams] = useSearchParams();
+  const selectedFlight = searchParams.get(QUERY_PARAM_FLIGHT);
 
-    const flight = useMemo(() => flights.find(flight => flight.flightNumber === selectedFlight), [selectedFlight])
+  const nodeRef = useRef<HTMLDivElement>(null);
 
-    const handleClickCloseDetails = () => {
-        const params = new URLSearchParams(searchParams)
-        params.delete(QUARY_PARAM_FLIGHT)
-        setSearchParams(params)
-    }
+  const flight = useMemo(
+    () => flights.find((flight) => flight.flightNumber === selectedFlight),
+    [selectedFlight]
+  );
 
-    return (
-        <>
-            {
-                flight &&
-                <div className={styles.outer_container}>
-                    <div className={styles.header}>
-                        <FlightTitle
-                            flightNumber={flight.flightNumber}
-                            airline={flight.airline}
-                            handleClickCloseDetails={handleClickCloseDetails}
-                        />
-                        <img src={flight?.airplane.airplaneImage} className={styles.airplane_image} />
-                    </div>
-                    <div className={styles.details_container}>
-                        <RouteInfo
-                            departure={flight.departure}
-                            arrival={flight.arrival}
-                            route={flight.route}
-                        />
-                        <FlightInfo
-                            airplane={flight.airplane}
-                            route={flight.route}
-                        />
-                        <Actions />
-                    </div>
-                </div>
-            }
-        </>
-    )
+  const handleClickCloseDetails = () => {
+    const params = new URLSearchParams(searchParams);
+    params.delete(QUERY_PARAM_FLIGHT);
+    setSearchParams(params);
+  };
+
+  return (
+    <SwitchTransition mode="out-in">
+      <CSSTransition
+        key={flight ? flight.flightNumber : "empty"}
+        nodeRef={nodeRef}
+        in={!!flight}
+        timeout={250}
+        classNames={{
+          enter: styles.fade_enter,
+          enterActive: styles.fade_enter_active,
+          exit: styles.fade_exit,
+          exitActive: styles.fade_exit_active,
+        }}
+        unmountOnExit
+      >
+        <div ref={nodeRef} className={styles.outer_container}>
+          {flight && (
+            <>
+              <div className={styles.header}>
+                <FlightTitle
+                  flightNumber={flight.flightNumber}
+                  airline={flight.airline}
+                  handleClickCloseDetails={handleClickCloseDetails}
+                />
+                <img
+                  src={flight?.airplane.airplaneImage}
+                  className={styles.airplane_image}
+                />
+              </div>
+              <div className={styles.details_container}>
+                <RouteInfo
+                  departure={flight.departure}
+                  arrival={flight.arrival}
+                  route={flight.route}
+                />
+                <FlightInfo airplane={flight.airplane} route={flight.route} />
+                <Actions />
+              </div>
+            </>
+          )}
+        </div>
+      </CSSTransition>
+    </SwitchTransition>
+  );
 }
