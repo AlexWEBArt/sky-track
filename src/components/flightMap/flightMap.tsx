@@ -1,22 +1,64 @@
 import { MapContainer, TileLayer, Polyline, Marker } from "react-leaflet";
+import { renderToStaticMarkup } from "react-dom/server";
+import { MapPin, Plane } from "lucide-react";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import planeIconUrl from "/public/plane.svg";
-import type { LatLngTuple } from "leaflet";
 import styles from "./flightMap.module.css";
-
-const flightPath: LatLngTuple[] = [
-  [53.3498, -6.2603], // Dublin (DUB)
-  [34.8728, 33.6249], // Larnaca (LCA)
-];
-
-const planeIcon = new L.Icon({
-  iconUrl: planeIconUrl,
-  iconSize: [32, 32],
-  iconAnchor: [16, 16],
-});
+import { QUERY_PARAM_FLIGHT } from "shared/constants";
+import { useSearchParams } from "react-router";
+import { useMemo } from "react";
+import flights from "shared/data/flights.json";
+import { useTheme } from "shared/theme";
+import type { IRoute } from "shared/types/IFlight.interface";
 
 export const FlightMap = () => {
+  const [searchParams] = useSearchParams();
+  const selectedFlight = searchParams.get(QUERY_PARAM_FLIGHT);
+  const { theme } = useTheme();
+
+  const flightRoute = useMemo(() => {
+    const route = flights.find(
+      (flight) => flight.flightNumber === selectedFlight
+    )?.route;
+    return route as IRoute;
+  }, [selectedFlight]);
+
+  const LucideMarkerIcon = (color: string) => {
+    const svg = renderToStaticMarkup(
+      <MapPin color={color} size={32} strokeWidth={3} />
+    );
+    return L.divIcon({
+      html: svg,
+      className: "",
+      iconAnchor: [16, 30],
+      iconSize: [32, 32],
+    });
+  };
+
+  const LucidePlaneIcon = (color: string, rotation: number) => {
+    const svg = renderToStaticMarkup(
+      <div
+        style={{
+          transform: `rotate(${rotation}deg)`,
+          width: "32px",
+          height: "32px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Plane color={color} size={28} strokeWidth={3} />
+      </div>
+    );
+
+    return L.divIcon({
+      html: svg,
+      className: "",
+      iconAnchor: [16, 16],
+      iconSize: [32, 32],
+    });
+  };
+
   return (
     <div className={styles.flight_map_container}>
       <MapContainer
@@ -31,12 +73,29 @@ export const FlightMap = () => {
           attribution="Tiles © Esri"
         />
 
-        <Polyline
-          positions={flightPath}
-          pathOptions={{ color: "#FF5733", weight: 4 }}
-        />
-
-        <Marker position={[44.5, 13.8]} icon={planeIcon} />
+        {flightRoute && (
+          <>
+            <Polyline
+              positions={flightRoute.flightPath}
+              pathOptions={{
+                color: theme === "dark" ? "#167afd" : "#FF5733",
+                weight: 3,
+              }}
+            />
+            <Marker
+              position={flightRoute.flightPath[0]}
+              icon={LucideMarkerIcon("#eeeeee")}
+            />
+            <Marker
+              position={flightRoute.flightPath[1]}
+              icon={LucideMarkerIcon("#eeeeee")}
+            />
+            <Marker
+              position={flightRoute.statusCoordinate}
+              icon={LucidePlaneIcon("#eeeeee", flightRoute.bearing)}
+            />
+          </>
+        )}
       </MapContainer>
     </div>
   );

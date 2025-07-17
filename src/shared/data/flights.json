@@ -26,9 +26,15 @@
     "route": {
       "countryName": "Bulgaria",
       "countryFlag": "/flags/BG.svg",
+      "flightPath": [
+        [42.6952, 23.4062],
+        [40.0801, 116.5846]
+      ],
       "speed": 870,
       "altitude": 11200,
-      "statusPercent": 67
+      "bearing": 45,
+      "statusPercent": 67,
+      "statusCoordinate": [40.9876, 84.671114]
     },
     "airplane": {
       "airplaneImage": "/airplanes/01_turkish_airbus-A330.png",
@@ -64,9 +70,15 @@
     "route": {
       "countryName": "Ireland",
       "countryFlag": "/flags/IE.svg",
+      "flightPath": [
+        [53.4213, -6.2701],
+        [34.8751, 33.6249]
+      ],
       "speed": 870,
       "altitude": 11300,
-      "statusPercent": 73
+      "bearing": 82,
+      "statusPercent": 73,
+      "statusCoordinate": [38.9271, 25.9]
     },
     "airplane": {
       "airplaneImage": "/airplanes/02_Ryanair_Boeing-737-800.png",
@@ -102,9 +114,15 @@
     "route": {
       "countryName": "France",
       "countryFlag": "/flags/FR.svg",
+      "flightPath": [
+        [43.6653, 7.2150],
+        [41.6692, 44.9547]
+      ],
       "speed": 840,
       "altitude": 10600,
-      "statusPercent": 45
+      "bearing": 45,
+      "statusPercent": 45,
+      "statusCoordinate": [42.8216, 23.314965]
     },
     "airplane": {
       "airplaneImage": "/airplanes/03_s7_Airbus-A320.png",
@@ -140,9 +158,15 @@
     "route": {
       "countryName": "Portugal",
       "countryFlag": "/flags/PT.svg",
+      "flightPath": [
+        [41.2356, -8.6781],
+        [40.4675, 50.0467]
+      ],
       "speed": 860,
       "altitude": 10900,
-      "statusPercent": 29
+      "bearing": 45,
+      "statusPercent": 29,
+      "statusCoordinate": [41.0185, 7.989262]
     },
     "airplane": {
       "airplaneImage": "/airplanes/04_SWISS_Airbus-A321.png",
@@ -178,9 +202,15 @@
     "route": {
       "countryName": "Bulgaria",
       "countryFlag": "/flags/BG.svg",
+      "flightPath": [
+        [42.5696, 27.5152],
+        [23.5933, 58.2844]
+      ],
       "speed": 875,
       "altitude": 11400,
-      "statusPercent": 81
+      "bearing": 86,
+      "statusPercent": 81,
+      "statusCoordinate": [26.170929, 54.45647]
     },
     "airplane": {
       "airplaneImage": "/airplanes/05_Lufthansa_Airbus-A350-900.png",
@@ -216,9 +246,15 @@
     "route": {
       "countryName": "France",
       "countryFlag": "/flags/FR.svg",
+      "flightPath": [
+        [49.0097, 2.5479],
+        [40.6413, -73.7781]
+      ],
       "speed": 890,
       "altitude": 11250,
-      "statusPercent": 54
+      "bearing": 33,
+      "statusPercent": 54,
+      "statusCoordinate": [44.794, -37.290266]
     },
     "airplane": {
       "airplaneImage": "/airplanes/01_turkish_airbus-A330.png",
@@ -254,9 +290,15 @@
     "route": {
       "countryName": "UAE",
       "countryFlag": "/flags/AE.svg",
+      "flightPath": [
+        [40.6413, -73.7781],
+        [25.2532, 55.3657]
+      ],
       "speed": 905,
       "altitude": 11800,
-      "statusPercent": 92
+      "bearing": 52,
+      "statusPercent": 92,
+      "statusCoordinate": [26.482276, 45.799114]
     },
     "airplane": {
       "airplaneImage": "/airplanes/02_Ryanair_Boeing-737-800.png",
@@ -292,9 +334,15 @@
     "route": {
       "countryName": "Norway",
       "countryFlag": "/flags/NO.svg",
+      "flightPath": [
+        [60.1976, 11.1004],
+        [25.2736, 51.6081]
+      ],
       "speed": 865,
       "altitude": 11000,
-      "statusPercent": 61
+      "bearing": 99,
+      "statusPercent": 61,
+      "statusCoordinate": [39.52616, 37.79]
     },
     "airplane": {
       "airplaneImage": "/airplanes/03_s7_Airbus-A320.png",
@@ -330,9 +378,15 @@
     "route": {
       "countryName": "India",
       "countryFlag": "/flags/IN.svg",
+      "flightPath": [
+        [28.5562, 77.1000],
+        [55.9726, 37.4146]
+      ],
       "speed": 850,
       "altitude": 10800,
-      "statusPercent": 22
+      "bearing": 93,
+      "statusPercent": 22,
+      "statusCoordinate": [35.1435, 69]
     },
     "airplane": {
       "airplaneImage": "/airplanes/04_SWISS_Airbus-A321.png",

@@ -1,3 +1,5 @@
+import type { LatLngTuple } from "leaflet";
+
 export interface IDeparture {
   code: string;
   name: string;
@@ -28,9 +30,12 @@ export interface IAirplane {
 export interface IRoute {
   countryName: string;
   countryFlag: string;
+  flightPath: LatLngTuple[];
   speed: number;
   altitude: number;
+  bearing: number;
   statusPercent: number;
+  statusCoordinate: LatLngTuple;
 }
 
 export interface IFlight {
