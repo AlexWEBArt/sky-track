@@ -5,6 +5,10 @@
   height: 100%;
 }
 
+.flight_map_container .leaflet-tile {
+  filter: brightness(0.6) contrast(1.1);
+}
+
 .flight_map {
   position: absolute;
   z-index: 1;
