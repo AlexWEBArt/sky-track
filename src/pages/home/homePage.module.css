@@ -1,15 +1,14 @@
 .page_layout {
-  display: flex;
+	display: flex;
 
-  width: 100%;
-  min-height: 100vh;
+	width: 100%;
+	min-height: 100vh;
 
-  background: transparent;
-  /* background-image: url("/Basemap-background.jpg"); */
+	background: transparent;
 }
 
 @media (min-width: 768px) and (max-width: 1120px) {
-  .page_layout {
-    justify-content: space-between;
-  }
+	.page_layout {
+		justify-content: space-between;
+	}
 }

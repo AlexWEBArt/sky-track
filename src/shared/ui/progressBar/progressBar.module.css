@@ -1,30 +1,30 @@
 .progress_bar {
-  position: relative;
-  margin: 15px 15px 0 15px;
-  line-height: 1;
+	position: relative;
+	margin: 15px 15px 0 15px;
+	line-height: 1;
 }
 
 .common_path {
-  position: absolute;
-  top: 5px;
-  left: 0;
+	position: absolute;
+	top: 5px;
+	left: 0;
 
-  width: 100%;
-  height: 2px;
+	width: 100%;
+	height: 2px;
 
-  background-color: var(--color-secondary);
+	background-color: var(--color-secondary);
 }
 
 .progress_path {
-  display: flex;
-  align-items: center;
-  justify-content: end;
+	display: flex;
+	align-items: center;
+	justify-content: end;
 
-  position: absolute;
-  top: 5px;
-  left: 0;
-  height: 2px;
+	position: absolute;
+	top: 5px;
+	left: 0;
+	height: 2px;
 
-  font-size: 26px;
-  background: var(--bg-gradient);
+	font-size: 26px;
+	background: var(--bg-gradient);
 }

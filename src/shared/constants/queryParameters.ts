@@ -1,1 +1,1 @@
-export const QUERY_PARAM_FLIGHT = "flight";
+export const QUERY_PARAM_FLIGHT = 'flight'

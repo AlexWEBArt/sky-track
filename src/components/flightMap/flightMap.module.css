@@ -1,33 +1,33 @@
 .flight_map-container {
-  position: relative;
+	position: relative;
 
-  width: 100%;
-  height: 100%;
+	width: 100%;
+	height: 100%;
 }
 
 .flight_map_container .leaflet-tile {
-  filter: brightness(0.6) contrast(1.1);
+	filter: brightness(0.6) contrast(1.1);
 }
 
 .flight_map {
-  position: absolute;
-  z-index: 1;
+	position: absolute;
+	z-index: 1;
 
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .map_error {
-  position: absolute;
-  top: calc(45% - 6px);
-  left: calc(50% - 100px);
-  width: 10%;
-  background: rgba(255, 51, 51, 0.9);
-  color: #fff;
-  padding: 12px;
-  z-index: 1000;
-  text-align: center;
-  font-weight: bold;
+	position: absolute;
+	top: calc(45% - 6px);
+	left: calc(50% - 100px);
+	width: 10%;
+	background: rgba(255, 51, 51, 0.9);
+	color: #fff;
+	padding: 12px;
+	z-index: 1000;
+	text-align: center;
+	font-weight: bold;
 }

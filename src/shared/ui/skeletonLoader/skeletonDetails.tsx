@@ -1,5 +1,5 @@
-import styles from "./skeletonLoader.module.css";
+import styles from './skeletonLoader.module.css'
 
 export function SkeletonDetails() {
-  return <div className={styles.skeleton_details}></div>;
+	return <div className={styles.skeleton_details}></div>
 }

@@ -1,1 +1,1 @@
-export { FlightDetails } from "./flightDetails";
+export { FlightDetails } from './flightDetails'

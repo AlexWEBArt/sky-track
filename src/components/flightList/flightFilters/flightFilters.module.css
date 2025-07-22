@@ -1,64 +1,67 @@
 .outer_container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 16px;
 
-  width: 350px;
-  margin: 5px;
-  padding: 20px 16px;
+	width: 350px;
+	margin: 5px;
+	padding: 20px 16px;
 
-  border-radius: 16px;
-  background-color: var(--bg-second-color);
-  transition: background-color 0.2s ease;
+	border-radius: 16px;
+	background-color: var(--bg-second-color);
+	transition: background-color 0.2s ease;
 }
 
 .filters_select {
-  width: 100%;
-  padding: 12px 20px;
-  border-radius: 12px;
-  background-color: var(--bg-primary-color);
-  color: var(--color-primary);
+	width: 100%;
+	padding: 12px 20px;
+	border-radius: 12px;
+	background-color: var(--bg-primary-color);
+	color: var(--color-primary);
 
-  border: 2px solid var(--color-primary);
-  outline: none;
-  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
-  appearance: none;
-  cursor: pointer;
+	border: 2px solid var(--color-primary);
+	outline: none;
+	transition:
+		background-color 0.2s,
+		border-color 0.2s,
+		color 0.2s;
+	appearance: none;
+	cursor: pointer;
 }
 
 .filters_select:focus,
 .filters_select:active {
-  border-color: var(--color-special);
-  background-color: var(--bg-second-color);
-  color: var(--color-primary);
+	border-color: var(--color-special);
+	background-color: var(--bg-second-color);
+	color: var(--color-primary);
 }
 
 .filters_select:open {
-  background-color: var(--bg-second-color);
+	background-color: var(--bg-second-color);
 }
 
 .filter_option {
-  background-color: var(--bg-second-color);
-  color: var(--color-primary);
-  border-radius: 8px;
-  padding: 8px 16px;
+	background-color: var(--bg-second-color);
+	color: var(--color-primary);
+	border-radius: 8px;
+	padding: 8px 16px;
 }
 
 .filter_option:hover,
 .filter_option:focus,
 .filter_option:active {
-  background-color: var(--color-special) !important;
+	background-color: var(--color-special) !important;
 }
 
 @media (min-width: 576px) and (max-width: 1120px) {
-  .outer_container {
-    align-items: flex-start;
-  }
+	.outer_container {
+		align-items: flex-start;
+	}
 }
 
 @media (max-width: 575px) {
-  .outer_container {
-    margin-top: 110px;
-  }
+	.outer_container {
+		margin-top: 110px;
+	}
 }

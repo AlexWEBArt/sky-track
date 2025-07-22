@@ -1,1 +1,1 @@
-export { FlightMap } from "./flightMap";
+export { FlightMap } from './flightMap'

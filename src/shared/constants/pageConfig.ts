@@ -1,6 +1,6 @@
 class Page {
-  HOME = "/";
-  FAVORITES = "/favorites";
+	HOME = '/'
+	FAVORITES = '/favorites'
 }
 
-export const PAGE_PATHS = new Page();
+export const PAGE_PATHS = new Page()

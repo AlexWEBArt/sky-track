@@ -1,4 +1,4 @@
 export interface IFlightFilters {
-  country: string;
-  airline: string;
+	country: string
+	airline: string
 }

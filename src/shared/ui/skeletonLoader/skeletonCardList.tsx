@@ -1,16 +1,19 @@
-import styles from "./skeletonLoader.module.css";
+import styles from './skeletonLoader.module.css'
 
 interface Props {
-  count: number;
+	count: number
 }
 
 export function SkeletonCardList({ count }: Props) {
-  return (
-    <div className={styles.skeleton_list}>
-      <div className={styles.skeleton_filter}></div>
-      {Array.from({ length: count }, (_, index) => (
-        <div key={index} className={styles.skeleton_card}></div>
-      ))}
-    </div>
-  );
+	return (
+		<div className={styles.skeleton_list}>
+			<div className={styles.skeleton_filter}></div>
+			{Array.from({ length: count }, (_, index) => (
+				<div
+					key={index}
+					className={styles.skeleton_card}
+				></div>
+			))}
+		</div>
+	)
 }
