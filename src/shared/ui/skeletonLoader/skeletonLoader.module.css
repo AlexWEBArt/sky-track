@@ -71,6 +71,36 @@
   animation: skeleton-shimmer 1.2s infinite;
 }
 
+.skeleton_details {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  width: 350px;
+  height: 80vh;
+
+  overflow: hidden;
+  z-index: 100;
+  border-radius: 26px;
+  background-color: var(--color-secondary);
+}
+
+.skeleton_details::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent 100%
+  );
+  animation: skeleton-shimmer 1.2s infinite;
+}
+
 @keyframes skeleton-shimmer {
   0% {
     transform: translateX(-100%);

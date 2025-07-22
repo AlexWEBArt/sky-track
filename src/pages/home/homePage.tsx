@@ -1,12 +1,16 @@
 import { Header } from "components/header";
 import { FlightDetails } from "components/flightDetails";
 import { FlightList } from "components/flightList";
-import flights from "shared/data/flights.json";
+import flightsJSON from "shared/data/flights.json";
 import styles from "./homePage.module.css";
 import { useEffect, useState } from "react";
-import { SkeletonLoader } from "shared/ui/skeletonLoader";
+import { SkeletonCardList } from "shared/ui/skeletonLoader";
+import { SkeletonDetails } from "shared/ui/skeletonLoader/skeletonDetails";
+import type { IFlight } from "shared/types/IFlight.interface";
 
 export const HomePage = () => {
+  const flights = flightsJSON as IFlight[];
+
   const [isFlightLoading, setIsFlightLoading] = useState(true);
 
   useEffect(() => {
@@ -18,12 +22,17 @@ export const HomePage = () => {
   return (
     <div className={styles.page_layout}>
       {isFlightLoading ? (
-        <SkeletonLoader count={5} />
+        <>
+          <SkeletonCardList count={5} />
+          <SkeletonDetails />
+        </>
       ) : (
-        <FlightList flights={flights} />
+        <>
+          <FlightList flights={flights} />
+          <FlightDetails flights={flights} />
+        </>
       )}
       <Header />
-      <FlightDetails flights={flights} />
     </div>
   );
 };

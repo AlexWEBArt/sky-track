@@ -32,9 +32,9 @@
       ],
       "speed": 870,
       "altitude": 11200,
-      "bearing": 45,
+      "bearing": 55,
       "statusPercent": 67,
-      "statusCoordinate": [40.9876, 84.671114]
+      "statusCoordinate": [50.7976, 84.88]
     },
     "airplane": {
       "airplaneImage": "/airplanes/01_turkish_airbus-A330.png",
@@ -78,7 +78,7 @@
       "altitude": 11300,
       "bearing": 82,
       "statusPercent": 73,
-      "statusCoordinate": [38.9271, 25.9]
+      "statusCoordinate": [41.33, 24.985]
     },
     "airplane": {
       "airplaneImage": "/airplanes/02_Ryanair_Boeing-737-800.png",
@@ -122,7 +122,7 @@
       "altitude": 10600,
       "bearing": 45,
       "statusPercent": 45,
-      "statusCoordinate": [42.8216, 23.314965]
+      "statusCoordinate": [44.3713, 23.314965]
     },
     "airplane": {
       "airplaneImage": "/airplanes/03_s7_Airbus-A320.png",
@@ -164,9 +164,9 @@
       ],
       "speed": 860,
       "altitude": 10900,
-      "bearing": 45,
+      "bearing": 36,
       "statusPercent": 29,
-      "statusCoordinate": [41.0185, 7.989262]
+      "statusCoordinate": [44.3965, 9.87]
     },
     "airplane": {
       "airplaneImage": "/airplanes/04_SWISS_Airbus-A321.png",
@@ -210,7 +210,7 @@
       "altitude": 11400,
       "bearing": 86,
       "statusPercent": 81,
-      "statusCoordinate": [26.170929, 54.45647]
+      "statusCoordinate": [26.87, 54.45647]
     },
     "airplane": {
       "airplaneImage": "/airplanes/05_Lufthansa_Airbus-A350-900.png",
@@ -252,9 +252,9 @@
       ],
       "speed": 890,
       "altitude": 11250,
-      "bearing": 33,
+      "bearing": 213,
       "statusPercent": 54,
-      "statusCoordinate": [44.794, -37.290266]
+      "statusCoordinate": [51.7939, -37.223]
     },
     "airplane": {
       "airplaneImage": "/airplanes/01_turkish_airbus-A330.png",
@@ -296,9 +296,9 @@
       ],
       "speed": 905,
       "altitude": 11800,
-      "bearing": 52,
+      "bearing": 92,
       "statusPercent": 92,
-      "statusCoordinate": [26.482276, 45.799114]
+      "statusCoordinate": [33.789, 47.585]
     },
     "airplane": {
       "airplaneImage": "/airplanes/02_Ryanair_Boeing-737-800.png",
@@ -342,7 +342,7 @@
       "altitude": 11000,
       "bearing": 99,
       "statusPercent": 61,
-      "statusCoordinate": [39.52616, 37.79]
+      "statusCoordinate": [44.037, 37.834]
     },
     "airplane": {
       "airplaneImage": "/airplanes/03_s7_Airbus-A320.png",
@@ -384,9 +384,9 @@
       ],
       "speed": 850,
       "altitude": 10800,
-      "bearing": 93,
+      "bearing": 275,
       "statusPercent": 22,
-      "statusCoordinate": [35.1435, 69]
+      "statusCoordinate": [35.24, 71.41]
     },
     "airplane": {
       "airplaneImage": "/airplanes/04_SWISS_Airbus-A321.png",
